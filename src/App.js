@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import {React, useState, useEffect } from "react";
 
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import "./globalstyles/globalstyle.css"
+import { Home } from "./pages/home";
+import { Login } from "./content/login";
+
+
+const App = () =>{
+
+  useEffect(() => {
+    document.title = "File Upload";
+  }, []);
+
+  const [user, setUser] = useState();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+
+      <Routes>
+
+        <Route path="/" element={<Login user={user} setUser={setUser} />} />
+        <Route path="/home" element={<Home user={user} setUser={setUser} />} />
+
+      
+      </Routes>    
+    
+    </BrowserRouter>
+
+  )
 }
 
 export default App;
