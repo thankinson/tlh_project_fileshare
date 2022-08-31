@@ -29,3 +29,11 @@ export const tokenLogin = async (setter) => {
         console.log(error)
     }
 };
+
+export const fileAdd = async (setter) => {
+    try {
+        // upload code here
+    } catch (error) {
+        
+    }
+}
