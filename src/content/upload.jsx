@@ -1,7 +1,9 @@
 import { React, useState } from "react";
 import styled from "styled-components";
+import { Navigate } from "react-router-dom";
+import { tokenLogin } from "../utils";
 
-export const Uploads =()=>{
+export const Uploads =({user, setUser})=>{
 
     const [file, setFile] = useState();
 
@@ -16,13 +18,15 @@ export const Uploads =()=>{
     return(
         
         <MainContainerDiv>
+            {(!user && !localStorage.key('myToken')) && <Navigate to="/"/>}
+            {(!user && localStorage.key('myToken')) && async function(setUser){ await tokenLogin(setUser) } }
             <LeftContentDiv>
                 <InfoContainer>
                     <h1>Uploads</h1>
                     
                     <Paragraph>On this page you can upload files to be stored.</Paragraph>
     
-                    <a href="">GitHub Repository</a>
+                    <a href="https://github.com/thankinson/tlh_project_fileshare" target="blank">GitHub Repository</a>
                     
                 </InfoContainer>
             </LeftContentDiv>

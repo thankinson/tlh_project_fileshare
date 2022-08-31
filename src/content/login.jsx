@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 import { userLogin } from "../utils";
 
-export const Login =(user, setUser)=>{
+export const Login =({user, setUser})=>{
     const [userName, setUserName] = useState();
     const [pass, setPass] = useState();
 
@@ -14,17 +14,19 @@ export const Login =(user, setUser)=>{
         userLogin(userName, pass, setUser)
     }
 
+
+
     return(
         
         <MainContainerDiv>
-            {/* {user && <Navigate to="/home" />} */}
+         {user && <Navigate to="/up" />}
             <LeftContentDiv>
                 <InfoContainer>
                     <h1>Welcome!</h1>
                     <h2> To my file share Site</h2>
                     <Paragraph>This site is intended for portfolio use only.</Paragraph>
                     {/* <Paragraph>Login details<br/> user name: guest <br/>password: password.</Paragraph> */}
-                    <a href="">GitHub Repository</a>
+                    <a href="https://github.com/thankinson/tlh_project_fileshare" target="blank">GitHub Repository</a>
                     
                 </InfoContainer>
             </LeftContentDiv>

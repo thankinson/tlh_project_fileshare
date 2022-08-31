@@ -1,3 +1,7 @@
+# For testing purpose the back end is hosted on a raspbery pi localy
+
+REACT_APP_REST_API = http://192.168.1.211:5000/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
