@@ -27,6 +27,14 @@ export const Uploads =({user, setUser})=>{
                     <h1>Uploads</h1>
                     
                     <Paragraph>On this page you can upload files to be stored.</Paragraph>
+                    <Paragraph>
+                         - Click on Browse Button -
+                        <br/>
+                        - Select file to upload -
+                        <br/>
+                        - Click upload File to upload -
+
+                    </Paragraph>
     
                     <a href="https://github.com/thankinson/tlh_project_fileshare" target="blank">GitHub Repository</a>
                     <hr/>
