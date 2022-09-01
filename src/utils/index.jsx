@@ -30,6 +30,16 @@ export const tokenLogin = async (setter) => {
     }
 };
 
+export const logout = ({ setUser }) => {
+    try {
+        localStorage.clear();
+        // window.location.reload(false);
+        setUser();
+    } catch (error) {
+        console.log(error)
+    }
+};
+
 export const fileAdd = async (setter) => {
     try {
         // upload code here
@@ -37,3 +47,4 @@ export const fileAdd = async (setter) => {
         
     }
 }
+

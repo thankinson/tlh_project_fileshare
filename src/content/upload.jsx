@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Navigate } from "react-router-dom";
 import { tokenLogin } from "../utils";
 
+import { logout } from "../utils";
+
 export const Uploads =({user, setUser})=>{
 
     const [file, setFile] = useState();
@@ -27,6 +29,9 @@ export const Uploads =({user, setUser})=>{
                     <Paragraph>On this page you can upload files to be stored.</Paragraph>
     
                     <a href="https://github.com/thankinson/tlh_project_fileshare" target="blank">GitHub Repository</a>
+                    <hr/>
+
+                    <SubmitButton onClick={() => logout(setUser={setUser})}>Logout</SubmitButton>
                     
                 </InfoContainer>
             </LeftContentDiv>
